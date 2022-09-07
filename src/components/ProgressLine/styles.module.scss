@@ -1,0 +1,69 @@
+@import '../../assets/styles/_resources.scss';
+
+.progress {
+  display: flex;
+  padding: 0;
+
+  &__part {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #3e3c41;
+
+    &:last-child {
+      justify-content: flex-start;
+      padding-left: 100px;
+    }
+
+    &:nth-child(2n) {
+      .progress__part__title {
+        padding-right: 15px;
+      }
+    }
+
+    &:nth-child(3n) {
+      .progress__part__title {
+        padding-right: 50px;
+      }
+    }
+
+    &.completed {
+      background: $button-color;
+    }
+
+    &.big {
+      width: 32%;
+
+      .progress__part__title {
+        padding-right: 100px;
+      }
+    }
+
+    &.small {
+      width: 18%;
+    }
+
+    &__number {
+      font-size: $dt_nav_font_size;
+      line-height: $dt_nav_line_height;
+      font-weight: 700;
+      color: $white;
+      padding: 5px;
+      border: 3px solid $white;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 21px;
+    }
+
+    &__title {
+      font-size: $dt_nav_font_size;
+      line-height: $dt_nav_line_height;
+      font-weight: 700;
+      color: $white;
+    }
+  }
+}

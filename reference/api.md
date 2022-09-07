@@ -1,7 +1,8 @@
 # API сервиса
 
 ### Базовый URL АПИ:
-*https://netology-trainbooking.netoservices.ru/*. 
+*https://netology-trainbooking.netoservices.ru/*.
+*https://fe-diplom.herokuapp.com/*.
 
 Пример запроса:
 

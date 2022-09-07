@@ -1,0 +1,96 @@
+@import '../../assets/styles/_resources.scss';
+
+.payment {
+  display: flex;
+  justify-content: space-between;
+
+  &__row {
+    margin-top: 95px;
+    width: 100%;
+  }
+
+  &__form {
+    max-width: 960px;
+    width: 100%;
+    margin-left: auto;
+    background: $white;
+    border: 1px solid #c4c4c4;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    margin-bottom: 45px;
+  }
+
+  &__head {
+    padding: 38px 35px;
+    background: $head_form_back;
+    border-bottom: 1px dashed #928f94;
+    margin-bottom: 20px;
+
+    h4 {
+      margin: 0;
+      color: $text_color3;
+      font-size: 30px;
+      line-height: 35px;
+      font-weight: 400;
+    }
+  }
+
+  &__button {
+    @include set-next-button();
+  }
+
+  &__name {
+    @include set-form-name();
+    padding-bottom: 45px;
+
+    &.column {
+      flex-direction: column;
+      align-items: flex-start;
+      border-bottom: 1px dashed #928f94;
+
+      div {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  &__methods {
+    padding: 25px 35px 75px;
+    border-bottom: 1px dashed #928f94;
+
+    &.bottom {
+      padding: 50px 35px;
+      border: 0;
+    }
+
+    &__check {
+      display: flex;
+      align-items: center;
+      margin-bottom: 28px;
+
+      p {
+        font-size: 24px;
+        line-height: 28px;
+
+        color: #928f94;
+      }
+
+      input {
+        width: 28px;
+        height: 28px;
+        margin-right: 20px;
+      }
+    }
+
+    &__list {
+      display: flex;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: $text-color3;
+
+      p {
+        margin-right: 70px;
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@mixin set-title {
+  text-transform: uppercase;
+  font-size: $dt_h2_font_size;
+  line-height: $dt_h2_line_height;
+  margin-bottom: 30px;
+}
+
+@mixin set-search-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 93px;
+
+  button {
+    max-width: 323px;
+    height: 60px;
+    width: 100%;
+    background: $button-color;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #292929;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+    border-radius: 5px;
+  }
+}
+
+@mixin set-input-search {
+  height: 60px;
+  max-width: 325px;
+  width: 100%;
+
+  :global {
+    .rbt-menu {
+      display: flex !important;
+      flex-direction: column;
+      background: #f5f4f6;
+      padding: 14px 28px 6px;
+      margin-top: 5px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 3px;
+    }
+
+    .dropdown-item {
+      font-size: $dt_input_font_size;
+      line-height: $dt_input_line_height;
+      text-transform: uppercase;
+      color: #292929;
+      margin-bottom: 8px;
+    }
+  }
+
+  input {
+    border-radius: 3px;
+    padding: 0 25px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+
+    &::placeholder {
+      color: $text-color2;
+    }
+  }
+
+  &::after {
+    content: url('../../../assets/images/city-icon.svg');
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@mixin set-input-date {
+  height: 60px;
+  max-width: 325px;
+  width: 100%;
+  border-radius: 3px;
+  padding: 0 25px;
+  font-size: $dt_input_font_size;
+  line-height: $dt_input_line_height;
+  text-transform: uppercase;
+  color: $text-color2;
+}
+
+@mixin set-next-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 102px 0;
+
+  button {
+    background: $button_color;
+    width: 222px;
+    height: 60px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 24px;
+    line-height: 28px;
+    cursor: pointer;
+
+    &:disabled {
+      background: #928f94;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@mixin set-form-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 35px 35px;
+
+  input {
+    max-width: 280px;
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    line-height: 28px;
+    color: $text-color3;
+    border: 1px solid #928f94;
+    border-radius: 5px;
+    padding: 12px 15px;
+
+    &::placeholder {
+      color: #d4d4d4;
+    }
+  }
+
+  &__label {
+    font-size: 16px;
+    line-height: 19px;
+    color: #928f94;
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,468 @@
+@import '../../assets/styles/_resources.scss';
+
+.wagon {
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 33px;
+    height: 37px;
+    background: rgba(255, 168, 0, 0.44);
+
+    &__number {
+      display: flex;
+      align-items: baseline;
+
+      p {
+        margin-right: 7px;
+      }
+    }
+
+    &__wagonText {
+      font-size: 18px;
+      line-height: 21px;
+      color: #292929;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 19px;
+      color: #292929;
+    }
+
+    &__white {
+      color: $white;
+      font-weight: 700;
+    }
+
+    &__black {
+      color: $black;
+      font-weight: 700;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    &__number {
+      background: rgba(255, 168, 0, 0.44);
+      text-align: center;
+      padding: 30px 74px 30px 33px;
+
+      &__num {
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 84px;
+        color: #292929;
+      }
+
+      &__descr {
+        font-size: 24px;
+        line-height: 28px;
+        color: #292929;
+        margin-top: -12px;
+      }
+    }
+
+    &__seats {
+      margin-top: 35px;
+
+      &__num {
+        font-size: 18px;
+        line-height: 21px;
+        color: #928f94;
+        margin-bottom: 24px;
+
+        span {
+          color: $black;
+          font-size: 18px;
+          line-height: 21px;
+        }
+      }
+
+      &__item {
+        font-size: 24px;
+        line-height: 28px;
+        color: #000000;
+        margin-bottom: 21px;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__cost {
+      margin-top: 35px;
+
+      &__rub {
+        font-size: 18px;
+        line-height: 21px;
+        color: #928f94;
+        margin-bottom: 24px;
+      }
+
+      &__life {
+        font-weight: 700;
+        color: $black;
+        margin-bottom: 21px;
+
+        img {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &__service {
+      padding-right: 33px;
+      margin-top: 35px;
+      text-align: center;
+
+      &__fpk {
+        font-size: 18px;
+        line-height: 21px;
+        color: #928f94;
+        margin-bottom: 24px;
+      }
+
+      &__items {
+        display: flex;
+      }
+
+      &__item {
+        position: relative;
+        display: inline-block;
+        background: transparent;
+        border: 0;
+        margin: 0 6px;
+
+        &:hover p {
+          visibility: visible;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 19px;
+          text-align: center;
+          color: #292929;
+          padding: 5px 10px;
+          background: #e5e5e5;
+          border-radius: 5px;
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          visibility: hidden;
+          position: absolute;
+          top: 140%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+
+          &::after {
+            content: ' ';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #e5e5e5 transparent;
+          }
+        }
+      }
+    }
+
+    &__people {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 42px;
+      margin-top: 4px;
+
+      p {
+        font-size: 16px;
+        line-height: 19px;
+        color: #292929;
+        background: #f3f3f3;
+        border-radius: 5px;
+        padding: 16px;
+        width: 200px;
+      }
+    }
+
+    &__sum {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 38px 32px;
+
+      p {
+        color: $primary_color;
+        font-weight: 700;
+      }
+
+      img {
+        margin-left: 10px;
+        max-width: 14px;
+      }
+    }
+  }
+}
+
+:global {
+  .vagon-places-container {
+    position: relative;
+    overflow: auto;
+    height: 140px;
+    width: 760px;
+    margin: 0 auto 20px;
+  }
+
+  .image-vagon-places {
+    position: absolute;
+    margin-left: 15px;
+    width: 740px;
+  }
+
+  .seats-index {
+    padding: 0;
+    border: none;
+    font: inherit;
+    background-color: rgb(226, 226, 226);
+    color: black;
+  }
+
+  .seats-index.true {
+    color: white;
+    background-color: rgb(144, 144, 144);
+    cursor: not-allowed;
+  }
+
+  .seats-index.false:hover {
+    background-color: rgb(167, 167, 167);
+  }
+
+  .seats-index.false:active {
+    border: solid 1px rgb(218, 185, 0);
+  }
+
+  .seats-index.false.active {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(245, 211, 18);
+  }
+
+  .seats-index.false.active:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .train-fourth-container {
+    position: relative;
+    padding-top: 26px;
+    padding-left: 124px;
+    padding-right: 100px;
+    display: grid;
+    grid-auto-flow: column dense;
+    grid-template-rows: repeat(2, 18px);
+    grid-template-columns: repeat(16, 35px);
+  }
+
+  .train-fourth-container .seats-index {
+    margin-bottom: 3px;
+    height: 15px;
+    width: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .train-fourth-container .seats-index:nth-child(2n + 1) {
+    grid-row-start: 2;
+  }
+
+  .train-fourth-container .seats-index:nth-child(-n + 17) {
+    margin-left: 15px;
+  }
+
+  .train-fourth-container .seats-index:nth-child(+ n + 17) {
+    margin-left: 15px;
+  }
+
+  .train-fourth-container-two {
+    position: relative;
+    margin-top: 11px;
+    padding-left: 124px;
+    padding-right: 100px;
+    padding-bottom: 2px;
+    display: grid;
+    grid-auto-flow: column dense;
+    grid-template-rows: repeat(2, 18px);
+    grid-template-columns: repeat(16, 35px);
+  }
+
+  .train-fourth-container-two .seats-index {
+    margin-bottom: 3px;
+    display: flex;
+    height: 15px;
+    width: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .train-fourth-container-two .seats-index:nth-child(2n + 1) {
+    grid-row-start: 2;
+  }
+
+  .train-fourth-container-two .seats-index:nth-child(-n + 17) {
+    margin-left: 15px;
+  }
+
+  .train-fourth-container-two .seats-index:nth-child(+ n + 17) {
+    margin-left: 15px;
+  }
+
+  .train-third-container {
+    position: relative;
+    padding-top: 23px;
+    padding-left: 122px;
+    padding-right: 85px;
+    display: grid;
+    grid-auto-flow: column dense;
+    grid-template-rows: repeat(2, 25px);
+    grid-template-columns: repeat(16, 36px);
+  }
+
+  .train-third-container .seats-index {
+    margin-bottom: 1px;
+    height: 24px;
+    width: 22px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .train-third-container .seats-index:nth-child(2n-1) {
+    grid-row-start: 2;
+    justify-self: end;
+    margin-right: 3px;
+  }
+
+  .train-third-container .seats-index:nth-child(4n) {
+    justify-self: end;
+    margin-right: 3px;
+  }
+
+  .train-third-container .seats-index:nth-child(4n-6) {
+    justify-self: start;
+  }
+
+  .train-third-container .seats-index:nth-child(4n + 5) {
+    justify-self: start;
+  }
+
+  .train-third-container .seats-index:nth-child(1) {
+    justify-self: start;
+  }
+
+  .train-third-container-two {
+    position: relative;
+    padding-top: 18px;
+    padding-left: 122px;
+    padding-right: 85px;
+    padding-bottom: 1px;
+    font-size: 13px;
+    font-weight: bold;
+    display: grid;
+    grid-auto-flow: column dense;
+  }
+
+  .train-third-container-two .seats-index.two-row {
+    margin-right: 2px;
+    height: 19px;
+    width: 34px;
+  }
+
+  .train-second-container {
+    position: relative;
+    padding-top: 23px;
+    padding-left: 122px;
+    padding-right: 85px;
+    display: grid;
+    grid-auto-flow: column dense;
+    grid-template-rows: repeat(2, 25px);
+    grid-template-columns: repeat(16, 36px);
+  }
+
+  .train-second-container .seats-index {
+    margin-bottom: 1px;
+    height: 24px;
+    width: 22px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .train-second-container .seats-index:nth-child(2n-1) {
+    grid-row-start: 2;
+    justify-self: end;
+    margin-right: 3px;
+  }
+
+  .train-second-container .seats-index:nth-child(4n) {
+    justify-self: end;
+    margin-right: 3px;
+  }
+
+  .train-second-container .seats-index:nth-child(4n-6) {
+    justify-self: start;
+  }
+
+  .train-second-container .seats-index:nth-child(4n + 5) {
+    justify-self: start;
+  }
+
+  .train-second-container .seats-index:nth-child(1) {
+    justify-self: start;
+  }
+
+  .train-second-container-two {
+    padding-bottom: 37px;
+  }
+
+  .train-first-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-top: 23px;
+    padding-left: 119px;
+    padding-right: 100px;
+  }
+
+  .train-first-container .seats-index {
+    display: flex;
+    height: 47px;
+    width: 22px;
+    font-size: 13px;
+    font-weight: bold;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .train-first-container .seats-index:nth-child(2n-1) {
+    margin-left: 3px;
+  }
+
+  .train-first-container .seats-index:nth-child(2n + 2) {
+    margin-left: 25px;
+  }
+
+  .train-first-container-two {
+    padding-bottom: 40px;
+  }
+
+  .number-of-vagon-checked label {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    position: relative;
+  }
+}

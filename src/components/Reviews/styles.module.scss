@@ -1,0 +1,11 @@
+@import '../../assets/styles/_resources.scss';
+
+.reviews {
+  padding: 120px 0 273px;
+
+  h2 {
+    @include set-title();
+    margin-bottom: 74px;
+    color: $text-color3;
+  }
+}

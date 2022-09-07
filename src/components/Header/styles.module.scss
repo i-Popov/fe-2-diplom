@@ -1,0 +1,37 @@
+@import '../../assets/styles/_resources.scss';
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: $level_header;
+  min-height: 158px;
+
+  &__logo {
+    height: 64px;
+    padding: 5px 0;
+    background: $logo-background;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 50px;
+      vertical-align: middle;
+    }
+  }
+
+  &__nav {
+    height: 94px;
+    background: $nav-background;
+    display: flex;
+    align-items: center;
+
+    a {
+      font-weight: 300;
+      font-size: $dt_nav_font_size;
+      line-height: $dt_nav_line_height;
+      margin-right: 84px;
+      color: $white;
+    }
+  }
+}

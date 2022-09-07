@@ -1,0 +1,60 @@
+@import '../../assets/styles/_resources.scss';
+
+.work {
+  background-image: url(../../assets/images/mask_group.png);
+  background-size: cover;
+  min-height: 575px;
+  padding: 60px 0;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      @include set-title();
+      margin: 0;
+      color: $white;
+    }
+
+    button {
+      color: $white;
+      font-weight: 700;
+      font-size: $dt_base_font_size;
+      line-height: $dt_base_line_height;
+      background: transparent;
+      max-width: 325px;
+      height: 60px;
+      border-radius: 5px;
+      border: 1px solid $white;
+      width: 100%;
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 910px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 97px 0 30px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      max-width: 226px;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+
+      img {
+        margin-bottom: 34px;
+      }
+
+      p {
+        color: $text-color;
+      }
+    }
+  }
+}

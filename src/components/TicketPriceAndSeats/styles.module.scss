@@ -1,0 +1,44 @@
+@import '../../assets/styles/_resources.scss';
+
+.seats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 25px;
+
+  &__name {
+    font-size: 16px;
+    line-height: 19px;
+    color: #3e3c41;
+    min-width: 86px;
+  }
+
+  &__number {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $primary-color;
+  }
+
+  &__from {
+    font-size: 16px;
+    line-height: 19px;
+    color: #928f94;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    min-width: 105px;
+    justify-content: flex-end;
+  }
+
+  &__cost {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #2d2b2f;
+    margin: 0 5px 0;
+  }
+}

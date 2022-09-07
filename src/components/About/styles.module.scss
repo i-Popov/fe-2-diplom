@@ -1,0 +1,26 @@
+@import '../../assets/styles/_resources.scss';
+
+.about {
+  padding: 114px 0 96px;
+  display: flex;
+  align-items: center;
+
+  &__title {
+    @include set-title();
+    color: $text-color3;
+  }
+
+  &__description {
+    border-left: 9px solid $button-color;
+    padding-left: 19px;
+
+    p {
+      margin-bottom: 28px;
+      color: $text-color3;
+    }
+
+    &__bold {
+      font-weight: 700;
+    }
+  }
+}

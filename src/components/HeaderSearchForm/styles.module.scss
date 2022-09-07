@@ -1,0 +1,63 @@
+@import '../../assets/styles/_resources.scss';
+
+.search {
+  background-image: url(../../assets/images/image_logo2.png);
+  background-size: cover;
+  background-color: rgba(146, 143, 148, 1);
+  min-height: 595px;
+  display: flex;
+  align-items: flex-end;
+
+  &__row {
+    background: rgba(41, 41, 41, 0.69);
+    padding: 28px 40px 76px;
+  }
+
+  &__forms {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    max-width: 685px;
+    width: 100%;
+
+    &:last-child {
+      margin-left: 35px;
+    }
+
+    &__row {
+      display: flex;
+      align-items: center;
+    }
+
+    &__title {
+      font-weight: 300;
+      font-size: $dt_h3_font_size;
+      line-height: $dt_h3_line_height;
+      color: $white;
+      margin-bottom: 17px;
+    }
+
+    &__change {
+      margin: 0 5px;
+    }
+
+    &__input {
+      @include set-input-search();
+    }
+
+    &__date {
+      @include set-input-date();
+
+      &:last-child {
+        margin-left: 35px;
+      }
+    }
+
+    &__button {
+      @include set-search-button();
+      margin-top: 50px;
+    }
+  }
+}

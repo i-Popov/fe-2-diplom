@@ -1,0 +1,16 @@
+@import '../../../assets/styles/_resources.scss';
+
+.container {
+  width: 100%;
+  padding: $sp_gutter;
+
+  @media (min-width: $sp_bp) {
+    padding: $tb_gutter;
+  }
+
+  @media (min-width: $dt_bp) {
+    padding: $dt_gutter;
+    max-width: $container_max_width;
+    margin: 0 auto;
+  }
+}

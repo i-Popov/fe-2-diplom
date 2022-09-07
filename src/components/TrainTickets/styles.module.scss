@@ -1,0 +1,111 @@
+@import '../../assets/styles/_resources.scss';
+
+.tickets {
+  margin: 85px 0 190px;
+  max-width: 960px;
+  width: 100%;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $text-color2;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 37px;
+
+    &__filter {
+      display: flex;
+      align-items: center;
+    }
+
+    &__sort {
+      select {
+        margin: 0 13px 0 3px;
+        font-size: 18px;
+        line-height: 21px;
+        background: transparent;
+        -webkit-appearance: none;
+        cursor: pointer;
+        color: $text-color3;
+        padding: 10px 7px;
+      }
+
+      option {
+        background: $main-color;
+      }
+    }
+
+    &__show {
+      button {
+        background: transparent;
+        font-size: 18px;
+        line-height: 21px;
+        color: $text-color2;
+        cursor: pointer;
+      }
+      :global {
+        .active {
+          color: $text-color3;
+        }
+      }
+    }
+  }
+
+  &__pages {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__right,
+    &__left {
+      width: 84px;
+      height: 75px;
+      border: 2px solid #c4c4c4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    &__right {
+      margin-right: 17px;
+    }
+
+    &__left {
+      margin-left: 17px;
+    }
+
+    :global {
+      .page-number {
+        border: 2px solid #c4c4c4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $text-color2;
+        width: 84px;
+        height: 75px;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 35px;
+        margin: 0 17px;
+        cursor: pointer;
+        transition: all ease 0.3s;
+        border-radius: 5px;
+
+        &:hover {
+          border-color: $button-color;
+          color: $primary-color;
+        }
+      }
+
+      .active {
+        border-color: $button-color;
+        background: $button-color;
+        color: $white;
+      }
+    }
+  }
+}

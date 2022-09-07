@@ -1,0 +1,44 @@
+@import '../../assets/styles/_resources.scss';
+
+.anotherTrain {
+  display: flex;
+  align-items: center;
+  padding: 36px 19px 32px 19px;
+
+  &__link {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #292929;
+    height: 60px;
+    border: 1px solid #292929;
+    border-radius: 5px;
+    width: 325px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+  }
+}
+
+.seat {
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    margin: 0 0 48px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #292929;
+    text-transform: uppercase;
+  }
+
+  &__ticketsRow {
+    margin-top: 95px;
+  }
+
+  &__button {
+    @include set-next-button();
+  }
+}

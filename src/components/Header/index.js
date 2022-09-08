@@ -9,9 +9,9 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.header__logo}>
         <Container>
-          <a href="/" id="header_logo">
+          <NavLink to="/" id="header_logo">
             <img src={logo} alt="ЖД Билеты" />
-          </a>
+          </NavLink>
         </Container>
       </div>
       <div className={styles.header__nav}>

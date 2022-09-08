@@ -120,24 +120,24 @@ const Form = (props) => {
           </div>
 
           <div className={styles.form__name}>
-            <div>
+            <div className={styles.form__name__item}>
               <p className={styles.form__name__label}>Фамилия</p>
               <input type="text" placeholder="Мартынюк" {...register('last_name', { required: true, maxLength: 30 })} />
-              {errors.last_name && errors.last_name.type === 'maxLength' && <span>*длина превышена</span>}
+              {errors.last_name && errors.last_name.type === 'maxLength' && <span className={styles.form__name__item__error}>*длина превышена</span>}
             </div>
-            <div>
+            <div className={styles.form__name__item}>
               <p className={styles.form__name__label}>Имя</p>
               <input type="text" placeholder="Ирина" {...register('first_name', { required: true, maxLength: 30 })} />
-              {errors.first_name && errors.first_name.type === 'maxLength' && <span>*длина превышена</span>}
+              {errors.first_name && errors.first_name.type === 'maxLength' && <span className={styles.form__name__item__error}>*длина превышена</span>}
             </div>
-            <div>
+            <div className={styles.form__name__item}>
               <p className={styles.form__name__label}>Отчество</p>
               <input
                 type="text"
                 placeholder="Эдуардовна"
                 {...register('patronymic', { required: true, maxLength: 30 })}
               />
-              {errors.patronymic && errors.patronymic.type === 'maxLength' && <span>*длина превышена</span>}
+              {errors.patronymic && errors.patronymic.type === 'maxLength' && <span className={styles.form__name__item__error}>*длина превышена</span>}
             </div>
           </div>
 
@@ -155,7 +155,7 @@ const Form = (props) => {
             <div className={styles.form__who__date}>
               <p className={styles.form__who__label}>Дата рождения</p>
               <input type="text" placeholder="дд/мм/гг" {...register('birthday', { required: true, maxLength: 30 })} />
-              {errors.birthday && errors.birthday.type === 'maxLength' && <span>*длина превышена</span>}
+              {errors.birthday && errors.birthday.type === 'maxLength' && <span className={styles.form__name__item__error}>*длина превышена</span>}
             </div>
           </div>
 
@@ -181,7 +181,7 @@ const Form = (props) => {
                 <div className={styles.form__passport__item}>
                   <p className={styles.form__passport__label}>Серия</p>
                   <input type="text" placeholder="_ _ _ _" {...register('serial', { required: true, maxLength: 4 })} />
-                  {errors.serial && errors.serial.type === 'maxLength' && <span>*длина превышена</span>}
+                  {errors.serial && errors.serial.type === 'maxLength' && <span className={styles.form__name__item__error}>*длина превышена</span>}
                 </div>
                 <div className={styles.form__passport__item}>
                   <p className={styles.form__passport__label}>Номер</p>
@@ -190,7 +190,7 @@ const Form = (props) => {
                     placeholder="_ _ _ _ _ _"
                     {...register('number', { required: true, maxLength: 6 })}
                   />
-                  {errors.number && errors.number.type === 'maxLength' && <span>*длина превышена</span>}
+                  {errors.number && errors.number.type === 'maxLength' && <span className={styles.form__name__item__error}>*длина превышена</span>}
                 </div>
               </>
             ) : (
@@ -201,7 +201,7 @@ const Form = (props) => {
                   placeholder="_ _ _  _ _  _ _ _ _ _"
                   {...register('document_data', { required: true, maxLength: 10 })}
                 />
-                {errors.document_data && errors.document_data.type === 'maxLength' && <span>*длина превышена</span>}
+                {errors.document_data && errors.document_data.type === 'maxLength' && <span className={styles.form__name__item__error}>*длина превышена</span>}
               </div>
             )}
           </div>

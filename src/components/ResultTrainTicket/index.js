@@ -3,7 +3,6 @@ import TicketPriceAndSeats from '../TicketPriceAndSeats';
 import { withRouter } from 'react-router';
 import { ucFL } from '../../helpers';
 import iconTicketTrain from '../../assets/images/icon_ticket_train.png';
-//import iconArrowRightGray from '../../assets/images/icon_arrow_right_gray.png';
 import iconArrowRightBlack from '../../assets/images/icon_arrow_right_black.png';
 import iconSearchThere from '../../assets/images/icon_search_there.png';
 import iconSearchBack from '../../assets/images/icon_search_back.png';

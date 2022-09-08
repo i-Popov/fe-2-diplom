@@ -3,4 +3,138 @@
 .order {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+
+  &__row {
+    margin-top: 95px;
+    width: 100%;
+    max-width: 960px;
+    margin-left: auto;
+  }
+
+  &__title {
+    border-top: 1px solid #c4c4c4;
+    border-left: 1px solid #c4c4c4;
+    border-right: 1px solid #c4c4c4;
+    padding: 28px 30px;
+    background: $white;
+
+    h4 {
+      font-size: 30px;
+      line-height: 35px;
+      font-weight: 400;
+      color: $text-color3;
+      margin: 0;
+    }
+  }
+
+  &__ticket {
+    @include set-ticket();
+
+    &__seatsRow {
+      &__group {
+        button,
+        a {
+          background: $white;
+          color: $text-color3;
+          border: 1px solid $text-color3;
+        }
+      }
+    }
+  }
+
+  &__passengers {
+    display: flex;
+    border: 1px solid #c4c4c4;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    background: $white;
+    margin-bottom: 47px;
+
+    &__row {
+      border-right: 1px dashed #e5e5e5;
+      padding: 30px 0;
+      max-width: 680px;
+      width: 100%;
+    }
+
+    &__total {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      width: 281px;
+      padding: 20px;
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        h4,
+        p {
+          font-weight: 400;
+          font-size: 30px;
+          line-height: 35px;
+          color: #292929;
+          margin: 0 0 35px;
+        }
+
+        p {
+          font-weight: 700;
+        }
+
+        img {
+          margin-left: 8px;
+          max-width: 20px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__cash {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px 21px;
+    border: 1px solid #c4c4c4;
+    background: $white;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+
+    h4 {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      color: $text-color3;
+    }
+
+    &__button {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      a {
+        width: 240px;
+        height: 40px;
+        border: 1px solid $text-color3;
+        border-radius: 5px;
+        color: $text-color3;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__button {
+    @include set-next-button();
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }

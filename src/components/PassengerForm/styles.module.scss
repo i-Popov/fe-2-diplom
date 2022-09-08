@@ -65,6 +65,19 @@
 
   &__name {
     @include set-form-name();
+
+    &__item {
+      position: relative;
+
+      &__error {
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+        color: $error_color;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
   }
 
   &__who {
@@ -79,6 +92,8 @@
     }
 
     &__date {
+      position: relative;
+      
       input {
         width: 240px;
         height: 50px;
@@ -215,6 +230,10 @@
     display: flex;
     padding: 36px;
     border-bottom: 1px dashed #928f94;
+    
+    &__item {
+      position: relative;
+    }
 
     select,
     input {

@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Дипломная работа к профессии frontend-разработчик (Система бронирования ЖД билетов)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+link:  
+https://i-popov.github.io/fe-2-diplom/
 
-## Available Scripts
+## Описание проекта
 
-In the project directory, you can run:
+### Основные элементы
 
-### `npm start`
+1. Вагон
+1. Направление
+1. Группа направлений
+1. Место (билет)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Вагон
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Вагон может быть одним из типов: сидячий, люкс (СВ), купе, плацкарт
+1. У каждого типа вагона своя карта рассадки мест.
+1. У каждого вагона своя стоимость билетов.
+1. Для каждого вагона есть возможность выбора дополнительных услуг:
+   бельё, кондиционер и Wi-Fi.
+1. Для некоторых вагонов стоимость белья включена в стоимость билета
+   (стоимость белья не должна прибавляться при формировании конечной стоимости билета).
 
-### `npm test`
+## Направление
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Направление - путь движения вагона из одного города в другой.
+1. Направление предполагает движение поезда только в одну сторону.
+1. Направление имеет дату отправления и дату прибытия.
 
-### `npm run build`
+## Группа направлений
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Используется для того, чтобы обеспечить возможность
+   путешествия из одного города в другой и обратно.
+1. Объединяет в себе два направления
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Место (билет)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Имеет свой номер на карте вагона
+1. Может быть занято другим пассажиром
+1. Закреплено за конкретным направлением

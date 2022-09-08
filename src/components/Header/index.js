@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from '../UI/Container';
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import styles from './styles.module.scss';
 
@@ -16,10 +17,18 @@ const Header = () => {
       <div className={styles.header__nav}>
         <Container>
           <nav>
-            <a href="/#about">О нас</a>
-            <a href="/#work">Как это работает</a>
-            <a href="/#reviews">Отзывы</a>
-            <a href="/#contacts">Контакты</a>
+            <NavLink to="/" onClick={() => window.scroll(0, 800)}>
+              О нас
+            </NavLink>
+            <NavLink to="/" onClick={() => window.scroll(0, 1400)}>
+              Как это работает
+            </NavLink>
+            <NavLink to="/" onClick={() => window.scroll(0, 2000)}>
+              Отзывы
+            </NavLink>
+            <NavLink to="/" onClick={() => window.scroll(0, 2500)}>
+              Контакты
+            </NavLink>
           </nav>
         </Container>
       </div>
